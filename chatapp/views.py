@@ -7,9 +7,13 @@ from datetime import date,timedelta
 from .models import QuestionAnswer
 import openai
 import json
+import os
+from dotenv import load_dotenv
 # Create your views here.
 
-open_api_key="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"
+load_dotenv()
+
+open_api_key=os.getenv("open_api_key")
 
 openai.api_key=open_api_key
 
